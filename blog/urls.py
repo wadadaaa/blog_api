@@ -4,6 +4,7 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'tags', views.TagViewSet)
+router.register(r'post', views.PostViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls))
