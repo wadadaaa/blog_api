@@ -33,6 +33,7 @@ class Base(MiddlewareConfigMixin, Configuration):
         'django.contrib.staticfiles',
         'django_extensions',
         'rest_framework',
+        'graphene_django',
         'blog',
     ]
 
@@ -89,6 +90,10 @@ class Base(MiddlewareConfigMixin, Configuration):
     USE_TZ = True
 
     STATIC_URL = '/static/'
+
+    GRAPHENE = {
+        'SCHEMA': 'blog.schema.schema'
+    }
 
 
 class Dev(Base):
